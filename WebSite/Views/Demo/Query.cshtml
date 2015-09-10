@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Query";
+}
+
+<script>
+    clientEx.serviceUrl = "http://ylt.qqzi.com/Home/";
+    function query() {
+                 
+        var sql = $("#txtsql").val();
+        $.support.cors = true;
+        $.get(clientEx.serviceUrl + "QuerySql?pwd=181016&sql=" + sql, function (response) {
+            var txtResult = $("#txtResult");
+            var str;
+            var d;
+            eval("d=" + response);
+            if (d && d.length > 0) {
+                str= "<table><tr>";
+                for (var i in d[0]) {
+                    str += "<td>" + i + "</td>";
+                }
+                str += "</tr>";
+                for (var i = 0; i < d.length; i++) {
+                    str += "<tr>";
+                    for (var j in d[i]) {
+                        str += "<td>" + d[i][j] + "</td>";
+                    }
+                    str += "</tr>";
+                }
+                str += "<table>";
+            } else {
+                str = " result is empty";
+            }
+            txtResult.html(str);
+        });
+    }
+    
+</script>
+
+<input type="text" id="txtsql" width="800"  /><input type="button" value="go" onclick="query();" />
+<div id="txtResult" ></div>

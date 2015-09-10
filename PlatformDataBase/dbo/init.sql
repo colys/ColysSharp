@@ -1,0 +1,1 @@
+﻿INSERT INTO A0_Business ([Name] ,[CompanyID]) VALUES('ND',1)

@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+<div>
+    <a href="javascript:add()">添加</a>
+    <table class="table table-striped table-hover table-responsive" id="listTable"></table>
+</div>
+<div>
+    <a href="javascript:getData2()">获取数据</a>
+    <table class="table table-striped table-hover table-responsive" id="listTable2"></table>
+</div>
+<div>
+    <a href="javascript:getData3()">获取数据</a>
+    <table class="table table-striped table-hover table-responsive" id="listTable3"></table>
+</div>
+    <script>
+        function add() {
+            //jtableHandle.CreateNewRow({ Name: "aa" });
+            jtableHandle.CreateNewRow({ Name: "aa", Remark: "随便写点" });
+        }
+
+      
+
+        var dataSouce = [{ Id: 1, Name: "张三", Remark: "说明1" }, { Id: 2, Name: "李四", Remark: "说明2" }, { Id: 3, Name: "王五", Remark: "说明3" }];
+
+        var columns = { Name: "姓名", Remark: "说明" };
+
+        /*-----------------------------------普通用法------------------------------*/
+        var jtableHandle = $("#listTable").jsonTable({
+            primary: "Id",
+            columns: columns,
+            data: dataSouce
+        });
+       
+        /*-----------------------------------可编辑------------------------------*/
+        jtableHandle2 = $("#listTable2").jsonTable({
+            primary: "Id",
+            columns: columns,
+            data: dataSouce,
+            readonly: false
+        });
+
+        function getData2() {
+            var data = jtableHandle2.GetEditValues();
+            alert(JSON.stringify(data));
+        }
+
+        /*-----------------------------------自定义操作栏------------------------------*/
+        jtableHandle3 = $("#listTable3").jsonTable({
+            primary: "Id",
+            columns: columns,
+            data: dataSouce,
+            readonly: false,
+            actionColumn: "编辑,删除",
+            onActionClick: function (sender) {
+                switch (sender.innerText) {
+                    case "编辑":
+                        alert("edit");
+                        break;
+                    case "删除":
+                        jtableHandle3.RemoveRow(sender);
+                        break;
+                }
+            }
+        });
+
+        function getData3() {
+            var data = jtableHandle3.GetEditValues();
+            alert(JSON.stringify(data));
+        }
+
+
+    </script>

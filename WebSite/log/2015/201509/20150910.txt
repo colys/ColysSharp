@@ -1,0 +1,498 @@
+
+ 
+记录时间：2015-09-10 00:38:07,571 
+线程ID:[376] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行查询语句:关键字 'Percent' 附近有语法错误。
+ 
+ColysSharp.ClientException: 执行查询语句:关键字 'Percent' 附近有语法错误。 ---> System.Data.SqlClient.SqlException: 关键字 'Percent' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String text, CommandType cmdType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 117
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String sql) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 20
+   在 ColysSharp.DataBase.DBContext.ParseQuery(QueryEntityInstance qei, Type entityType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 676
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 308
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 70
+
+ 
+记录时间：2015-09-10 00:38:29,836 
+线程ID:[4548] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行查询语句:关键字 'Percent' 附近有语法错误。
+ 
+ColysSharp.ClientException: 执行查询语句:关键字 'Percent' 附近有语法错误。 ---> System.Data.SqlClient.SqlException: 关键字 'Percent' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String text, CommandType cmdType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 117
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String sql) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 20
+   在 ColysSharp.DataBase.DBContext.ParseQuery(QueryEntityInstance qei, Type entityType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 676
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 308
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 70
+
+ 
+记录时间：2015-09-10 00:39:07,766 
+线程ID:[11736] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行查询语句:关键字 'Percent' 附近有语法错误。
+ 
+ColysSharp.ClientException: 执行查询语句:关键字 'Percent' 附近有语法错误。 ---> System.Data.SqlClient.SqlException: 关键字 'Percent' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String text, CommandType cmdType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 117
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String sql) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 20
+   在 ColysSharp.DataBase.DBContext.ParseQuery(QueryEntityInstance qei, Type entityType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 676
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 308
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 70
+
+ 
+记录时间：2015-09-10 00:39:32,181 
+线程ID:[4548] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行查询语句:关键字 'Percent' 附近有语法错误。
+ 
+ColysSharp.ClientException: 执行查询语句:关键字 'Percent' 附近有语法错误。 ---> System.Data.SqlClient.SqlException: 关键字 'Percent' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String text, CommandType cmdType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 117
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String sql) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 20
+   在 ColysSharp.DataBase.DBContext.ParseQuery(QueryEntityInstance qei, Type entityType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 676
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 308
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 70
+
+ 
+记录时间：2015-09-10 00:40:16,177 
+线程ID:[7592] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行查询语句:关键字 'Percent' 附近有语法错误。
+ 
+ColysSharp.ClientException: 执行查询语句:关键字 'Percent' 附近有语法错误。 ---> System.Data.SqlClient.SqlException: 关键字 'Percent' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String text, CommandType cmdType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 117
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String sql) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 20
+   在 ColysSharp.DataBase.DBContext.ParseQuery(QueryEntityInstance qei, Type entityType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 676
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 308
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 70
+
+ 
+记录时间：2015-09-10 17:16:28,813 
+线程ID:[7320] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行查询语句:用户 'hruser' 登录失败。
+ 
+ColysSharp.ClientException: 执行查询语句:用户 'hruser' 登录失败。 ---> System.Data.SqlClient.SqlException: 用户 'hruser' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.OpenSql() 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 35
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.setCommand(String sql, Boolean query) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 43
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String text, CommandType cmdType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 113
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String sql) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 20
+   在 ColysSharp.DataBase.DBContext.ParseQuery(QueryEntityInstance qei, Type entityType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 676
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 308
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 70
+
+ 
+记录时间：2015-09-10 17:16:30,329 
+线程ID:[3120] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：分页查询count:用户 'hruser' 登录失败。
+ 
+ColysSharp.ClientException: 分页查询count:用户 'hruser' 登录失败。 ---> System.Data.SqlClient.SqlException: 用户 'hruser' 登录失败。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.OpenSql() 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 35
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.setCommand(String sql, Boolean query) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 43
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.ExecScalar(String text, CommandType cmdType, IDbDataParameter[] parameters) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 134
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.ExecScalar(String sql) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 60
+   在 ColysSharp.DataBase.DBContext.ParseQuery(QueryEntityInstance qei, Type entityType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 656
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 308
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 67
+
+ 
+记录时间：2015-09-10 17:51:28,049 
+线程ID:[8132] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：Create A New QueryEntity:ColysSharp.StaticHtml.User,ColysSharp.DataBase类型找不到!
+ 
+ColysSharp.ClientException: Create A New QueryEntity:ColysSharp.StaticHtml.User,ColysSharp.DataBase类型找不到! ---> ColysSharp.ClientException: ColysSharp.StaticHtml.User,ColysSharp.DataBase类型找不到!
+   在 ColysSharp.DataBase.QueryParam.InitParam(String format) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\QueryEntitys.cs:行号 205
+   在 ColysSharp.DataBase.DBContext.SetQueryEntityConfig(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 294
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 307
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 67
+
+ 
+记录时间：2015-09-10 17:52:02,500 
+线程ID:[2784] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行插入语句:不能将值 NULL 插入列 'sName'，表 'sy300.dbo.X5_wsSites'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+ 
+ColysSharp.ClientException: 执行插入语句:不能将值 NULL 插入列 'sName'，表 'sy300.dbo.X5_wsSites'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 不能将值 NULL 插入列 'sName'，表 'sy300.dbo.X5_wsSites'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.ExecScalar(String text, CommandType cmdType, IDbDataParameter[] parameters) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 140
+   在 ColysSharp.DataBase.DBContext.SaveEntity(Object obj, ParseInfo rootParseInfo) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 1011
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 713
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 718
+   在 ColysSharp.Mvc.BaseController.DoSave() 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 173
+
+ 
+记录时间：2015-09-10 17:55:08,873 
+线程ID:[9024] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行插入语句:SqlDateTime 溢出。必须介于 1/1/1753 12:00:00 AM 和 12/31/9999 11:59:59 PM 之间。
+ 
+ColysSharp.ClientException: 执行插入语句:SqlDateTime 溢出。必须介于 1/1/1753 12:00:00 AM 和 12/31/9999 11:59:59 PM 之间。 ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime 溢出。必须介于 1/1/1753 12:00:00 AM 和 12/31/9999 11:59:59 PM 之间。
+   在 System.Data.SqlClient.TdsParser.TdsExecuteRPC(_SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.ExecScalar(String text, CommandType cmdType, IDbDataParameter[] parameters) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 140
+   在 ColysSharp.DataBase.DBContext.SaveEntity(Object obj, ParseInfo rootParseInfo) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 1011
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 713
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 718
+   在 ColysSharp.Mvc.BaseController.DoSave() 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 173
+
+ 
+记录时间：2015-09-10 17:57:37,162 
+线程ID:[10304] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行插入语句:不能将值 NULL 插入列 'Password'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+ 
+ColysSharp.ClientException: 执行插入语句:不能将值 NULL 插入列 'Password'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 不能将值 NULL 插入列 'Password'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.ExecScalar(String text, CommandType cmdType, IDbDataParameter[] parameters) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 140
+   在 ColysSharp.DataBase.DBContext.SaveEntity(Object obj, ParseInfo rootParseInfo) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 1011
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 713
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 718
+   在 ColysSharp.Mvc.BaseController.DoSave() 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 173
+
+ 
+记录时间：2015-09-10 17:58:20,345 
+线程ID:[10724] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行插入语句:不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+ 
+ColysSharp.ClientException: 执行插入语句:不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.ExecScalar(String text, CommandType cmdType, IDbDataParameter[] parameters) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 140
+   在 ColysSharp.DataBase.DBContext.SaveEntity(Object obj, ParseInfo rootParseInfo) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 1011
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 713
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 718
+   在 ColysSharp.Mvc.BaseController.DoSave() 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 173
+
+ 
+记录时间：2015-09-10 17:59:10,919 
+线程ID:[10456] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行插入语句:不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+ 
+ColysSharp.ClientException: 执行插入语句:不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.ExecScalar(String text, CommandType cmdType, IDbDataParameter[] parameters) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 140
+   在 ColysSharp.DataBase.DBContext.SaveEntity(Object obj, ParseInfo rootParseInfo) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 1011
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 713
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 718
+   在 ColysSharp.Mvc.BaseController.DoSave() 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 173
+
+ 
+记录时间：2015-09-10 18:00:46,325 
+线程ID:[8372] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行插入语句:不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+ 
+ColysSharp.ClientException: 执行插入语句:不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.ExecScalar(String text, CommandType cmdType, IDbDataParameter[] parameters) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 140
+   在 ColysSharp.DataBase.DBContext.SaveEntity(Object obj, ParseInfo rootParseInfo) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 1011
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 713
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 718
+   在 ColysSharp.Mvc.BaseController.DoSave() 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 173
+
+ 
+记录时间：2015-09-10 18:01:58,016 
+线程ID:[7976] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行插入语句:不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+ 
+ColysSharp.ClientException: 执行插入语句:不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 ---> System.Data.SqlClient.SqlException: 不能将值 NULL 插入列 'ZiEBaoBalance'，表 'sy300.dbo.A0_Users'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.ExecScalar(String text, CommandType cmdType, IDbDataParameter[] parameters) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 140
+   在 ColysSharp.DataBase.DBContext.SaveEntity(Object obj, ParseInfo rootParseInfo) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 1011
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 713
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoSave(String permission, String entityName, String entityJson) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 718
+   在 ColysSharp.Mvc.BaseController.DoSave() 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 173
+
+ 
+记录时间：2015-09-10 18:04:42,691 
+线程ID:[7340] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行查询语句:关键字 'Percent' 附近有语法错误。
+ 
+ColysSharp.ClientException: 执行查询语句:关键字 'Percent' 附近有语法错误。 ---> System.Data.SqlClient.SqlException: 关键字 'Percent' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String text, CommandType cmdType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 117
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String sql) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 20
+   在 ColysSharp.DataBase.DBContext.ParseQuery(QueryEntityInstance qei, Type entityType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 676
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 308
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 70
+
+ 
+记录时间：2015-09-10 18:05:01,383 
+线程ID:[10404] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：执行查询语句:关键字 'Percent' 附近有语法错误。
+ 
+ColysSharp.ClientException: 执行查询语句:关键字 'Percent' 附近有语法错误。 ---> System.Data.SqlClient.SqlException: 关键字 'Percent' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String text, CommandType cmdType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 117
+   在 ColysSharp.DataBase.SqlClient.SqlAccess.QueryTable(String sql) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\SqlClient\SqlAccess.cs:行号 20
+   在 ColysSharp.DataBase.DBContext.ParseQuery(QueryEntityInstance qei, Type entityType) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 676
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 308
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 70

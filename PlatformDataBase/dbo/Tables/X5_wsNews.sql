@@ -1,0 +1,32 @@
+﻿CREATE TABLE [dbo].[X5_wsNews] (
+    [Autocode]       INT              IDENTITY (1, 1) NOT NULL,
+    [sTitle]         NVARCHAR (100)   NULL,
+    [sContent]       NTEXT            NULL,
+    [sSummary]       NVARCHAR (250)   NULL,
+    [sClsCode]       VARCHAR (10)     NULL,
+    [lParentCode]    INT              NULL,
+    [lPageCount]     INT              CONSTRAINT [DF__X5_wsNews__lPage__1273C1CD] DEFAULT ((0)) NULL,
+    [sTitleImg]      NVARCHAR (100)   NULL,
+    [lAttribute]     INT              NULL,
+    [lState]         INT              NULL,
+    [lHit]           INT              NULL,
+    [sLink]          NVARCHAR (100)   NULL,
+    [dTimeAdd]       DATETIME         NULL,
+    [sAuthor]        NVARCHAR (20)    NULL,
+    [sEditor]        NVARCHAR (20)    NULL,
+    [sS
+ource]      NVARCHAR (50)    NULL,
+    [lComment]       INT              CONSTRAINT [DF__X5_wsNews__lComm__1367E606] DEFAULT ((0)) NULL,
+    [lTemplete]      INT              NULL,
+    [sTag]           NVARCHAR (200)   NULL,
+    [sTitleColor]    NVARCHAR (10)    NULL,
+    [sFileNames]     NVARCHAR (2000)  NULL,
+    [sPersoncode]    NVARCHAR (20)    NULL,
+    [sDepCode]       NVARCHAR (20)    NULL,
+    [sTitleFontSize] NVARCHAR (10)    NULL,
+    [lCanCopy]       TINYINT          CONSTRAINT [DF__X5_wsNews__lCanC__145C0A3F] DEFAULT ((1)) NOT NULL,
+    [bMustLogin]     BIT              NULL,
+    [sGuid]          UNIQUEIDENTIFIER NULL,
+    [lZan]           INT              NULL
+);
+

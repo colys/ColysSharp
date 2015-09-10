@@ -1,0 +1,28 @@
+
+ 
+记录时间：2015-09-09 22:29:46,875 
+线程ID:[10724] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：Create A New QueryEntity:CirclesFinancial.Modals.SiteInfo,CirclesFinancial.Modals类型找不到!
+ 
+ColysSharp.ClientException: Create A New QueryEntity:CirclesFinancial.Modals.SiteInfo,CirclesFinancial.Modals类型找不到! ---> ColysSharp.ClientException: CirclesFinancial.Modals.SiteInfo,CirclesFinancial.Modals类型找不到!
+   在 ColysSharp.DataBase.QueryParam.InitParam(String format) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\QueryEntitys.cs:行号 205
+   在 ColysSharp.DataBase.DBContext.SetQueryEntityConfig(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 294
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 307
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 ColysSharp.DataBase.DBContext.DoQuery(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 312
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 70
+
+ 
+记录时间：2015-09-09 22:29:50,027 
+线程ID:[11344] 
+日志级别：  ERROR 
+出错类：system property: [(null)] - 
+错误描述：CirclesFinancial.Modals.NewsCls,CirclesFinancial.Modals类型找不到!
+ 
+ColysSharp.ClientException: CirclesFinancial.Modals.NewsCls,CirclesFinancial.Modals类型找不到!
+   在 ColysSharp.DataBase.QueryParam.InitParam(String format) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\QueryEntitys.cs:行号 205
+   在 ColysSharp.DataBase.DBContext.GetParentCustomerProperty(QueryParam param) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 207
+   在 ColysSharp.DataBase.DBContext.QueryTree(QueryParam param, Object parentVal) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\DataBase\DBContext.cs:行号 428
+   在 ColysSharp.Mvc.BaseController.DoQuery(String permission, String queryField, String entityName, String whereField, String orderBy) 位置 d:\QuickDisk\MyWork\ColysSharp\DataBase\Mvc\BaseController.cs:行号 59

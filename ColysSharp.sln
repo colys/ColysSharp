@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColysSharp", "DataBase\ColysSharp.csproj", "{4FD2429C-102B-4D7E-B37A-B8618315C01E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{B51315F1-F7E4-4B95-8A90-682A8E2BC0A4}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MyJS", "http://localhost:39765", "{7B34609C-1BF9-4B5C-A42A-9F7F8AE43B97}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_39765"
+		Debug.AspNetCompiler.PhysicalPath = "..\sae\teaerp\1\MyJS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39765\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_39765"
+		Release.AspNetCompiler.PhysicalPath = "..\sae\teaerp\1\MyJS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39765\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\sae\teaerp\1\MyJS\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{18EED01C-BF7F-4CB8-92CF-99458237B240}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PlatformDataBase", "PlatformDataBase\PlatformDataBase.sqlproj", "{6433D9D0-103E-47CB-AC40-D25DB940F532}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FD2429C-102B-4D7E-B37A-B8618315C01E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD2429C-102B-4D7E-B37A-B8618315C01E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD2429C-102B-4D7E-B37A-B8618315C01E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD2429C-102B-4D7E-B37A-B8618315C01E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B34609C-1BF9-4B5C-A42A-9F7F8AE43B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B34609C-1BF9-4B5C-A42A-9F7F8AE43B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B34609C-1BF9-4B5C-A42A-9F7F8AE43B97}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B34609C-1BF9-4B5C-A42A-9F7F8AE43B97}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{18EED01C-BF7F-4CB8-92CF-99458237B240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18EED01C-BF7F-4CB8-92CF-99458237B240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18EED01C-BF7F-4CB8-92CF-99458237B240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18EED01C-BF7F-4CB8-92CF-99458237B240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6433D9D0-103E-47CB-AC40-D25DB940F532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6433D9D0-103E-47CB-AC40-D25DB940F532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6433D9D0-103E-47CB-AC40-D25DB940F532}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6433D9D0-103E-47CB-AC40-D25DB940F532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6433D9D0-103E-47CB-AC40-D25DB940F532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6433D9D0-103E-47CB-AC40-D25DB940F532}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

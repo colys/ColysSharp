@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "用户管理";
+}
+
+<h2>用户管理-EntityTable实例</h2>
+<section class="container  clear-fix">
+    <div class="page-header">
+
+        <p>
+            <a id="addnew" href="#">添加</a>
+        <p>
+    </div>
+    
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-responsive" id="listTable">
+                <thead>
+                    <tr>
+                        <th colname="#">#</th>
+                        <th colname="Name">姓名</th>
+                        <th colname="Account">账号</th>
+                        <th colname="WeiXin">微信</th>
+                        <th colname="Company">公司</th>
+                        <th colname="#action">操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="pagger"></div>    
+</section>
+
+
+<script>
+
+
+    /*editCols为编辑的项，group为一个panel可组显示,display为显示label,colName为实体属性名，fields还有其它参数：
+        type：类型值有text,dropdown,checkbox,date,pic，默认为text
+           如果是dropdown类型还需要配置数据源，数据源有三种方式：
+               data:直接添加data参数，值为json数组，每项要有value和text
+               url:通过ajax访问url，将返回值做为数据源，每项要有value和text
+               table:通过内部方法直接查询table，需要配置参数displayField和valueField，分别对应text和value
+       requre:必需要输入
+   */
+
+
+    var entityTable_ops = {
+        table: "User"
+        , primary: "UserId"
+        , pageSize: 10
+        , triggerQuery: true
+        , pagger: "#pagger"
+        , editCols: [
+            {
+                group: "基础属性", fields: [
+                    { display: '姓名', colName: "Name", requre: true },
+                    { display: '账号', colName: "Account", requre: true },
+                    { display: '密码', colName: "Password", requre: true },
+                    { display: '提现密码', colName: "ZiEBaoPassword", requre: true },
+                    { display: '微信', colName: "WeiXin", requre: true },
+                    { display: 'QQ', colName: "QQ", requre: true },
+                    { display: '身份证', colName: "IDCard", requre: true },
+                    { display: '手机', colName: "Mobile", requre: true },
+                    { display: '公司', colName: "Company", requre: true },
+                    { display: '代理商', colName: "TemplateId",  type: "dropdown", table: "Agencys", valueField: "AgencyCode", displayField: "Company" }
+
+                ]
+            }]
+    };
+    var entityTable = $("#listTable").entityTable(entityTable_ops);
+
+
+
+    $("#addnew").click(function () {
+        entityTable.ShowCreateDialog();
+    })
+
+
+
+
+
+</script>

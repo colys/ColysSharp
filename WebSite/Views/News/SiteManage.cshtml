@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "站点配置";
+}
+
+<h2>ClassManage</h2>
+<section class="container  clear-fix">
+    <div class="page-header">
+
+        <p>
+            <a id="addnew" href="#">添加</a>
+        <p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-responsive" id="listTable">
+            <thead>
+                <tr>
+                    <th colname="#">#</th>
+                    <th colname="sName">站点名称</th>
+                    <th colname="sDirectory">目录名称</th>
+                    <th colname="#action">操作</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="pagger"></div>
+</section>
+
+
+<script>
+
+
+    /*editCols为编辑的项，group为一个panel可组显示,display为显示label,colName为实体属性名，fields还有其它参数：
+        type：类型值有text,dropdown,checkbox,date,pic，默认为text
+           如果是dropdown类型还需要配置数据源，数据源有三种方式：
+               data:直接添加data参数，值为json数组，每项要有value和text
+               url:通过ajax访问url，将返回值做为数据源，每项要有value和text
+               table:通过内部方法直接查询table，需要配置参数displayField和valueField，分别对应text和value
+       requre:必需要输入
+   */
+
+
+    var entityTable_ops = {
+        table: "SiteInfo"
+        , primary: "AutoCode"
+        , pageSize: 10
+        , triggerQuery: true
+        , pagger: "#pagger"
+        , defaults: {lCompanyCode:1}
+        , editCols: [
+            {
+                group: "基础属性", fields: [
+                    { display: '站点名称', colName: "SName", requre: true },
+                    { display: '目录名称', colName: "sDirectory", requre: true }
+                ]
+            }]
+    };
+    var entityTable = $("#listTable").entityTable(entityTable_ops);
+
+
+
+    $("#addnew").click(function () {
+        entityTable.ShowCreateDialog();
+    })
+
+
+
+
+
+</script>

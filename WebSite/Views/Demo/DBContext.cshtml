@@ -1,0 +1,172 @@
+﻿@{
+    ViewBag.Title = "DBContext";
+}
+@section scripts{
+    <style>
+        .parameter-label{
+            width:100px;
+            text-align:right;
+        }
+    </style>
+}
+<h2>DBContext及客户端clientEx使用说明</h2>
+
+开始之前：
+项目有引用ColysSharp.DataBase.dll并且在global中注册
+实体创建并且继承IDBEntity，如果是树形的要继承ITreeDBEntity，实体对应的表名以及各主键外键的配置
+
+
+<hr />
+
+客户端clientEx
+<ul>
+    <li>查询列表：
+    <div>
+        <pre>
+            var queryResult = clientEx.execQuery(permission, queryCols, entityName, whereJson);
+            permission:权限配置项，对应Content下的Permission.json文件
+            queryCols:要查询的列，对应实体的属性名，也可用sql函数
+            entityName:实体名
+            whereJson:查询条件，比如{Name="colys"}或者 { Name = "like '%colys%'" , Status= 1} 或者{ Status = "> 1" } ，不过建议有运算的配置在Permission.json的Fields里，条件属性间and关系，暂时不支持or方式
+        </pre>
+    </div>
+    </li>
+    <li>
+        查询单个对象：
+        <div>
+         <pre>
+            var product = clientEx.getObject(permission, entityName, primarkValue);
+            permission:权限配置项，对应Content下的Permission.json文件            
+            entityName:实体名
+            primarkValue:主键的值
+         </pre>
+        </div>
+    </li>
+
+
+</ul>
+
+
+
+<hr />
+服务端DBContext：
+
+
+<ul>
+    <li>
+        查询类：
+        <div>
+            <pre>            
+            permission:权限配置项，对应Content下的Permission.json文件            
+            entityName:实体名
+            queryField:同客户端queryCols
+            whereJson: where条件json字符串
+            ClientWhere: Dictionary&lt;string, string&gt;类型，与whereJson选择用一种方式传where
+            orderBy: 排序
+            Page:Pagger类，分页用，属性有：PageIndex，PageIndex，Total
+         </pre>
+        </div>
+    </li>
+    <li>
+        查询列表
+        <pre>  
+            方式一：public List &lt;T&gt; QueryMany&lt;T&gt;(object where)
+            泛型T:实体类型
+            where:查询动态类，比如new {Name="like '%aa%'"}
+
+            方式二：public List&lt;T&gt; QueryMany&lt;T&gt;(QueryParam param)
+            param:查询类
+            泛型T:实体类型
+
+            方式三：public DataTable DoQuery(QueryParam param)
+            param:查询类
+
+            方式四：public DataTable QueryTable&lt;T&gt;(object where, string permission = null)
+            where:查询动态类，比如new {Name="like '%aa%'"}
+            permission:同客户端permission,默认参数，可不要
+
+            方式五：public DataTable QueryTable(string entityName, object where, string permission = null)
+            entityName:实体名
+            where:查询动态类，比如new {Name="like '%aa%'"}
+            permission:同客户端permission,默认参数，可不要
+        </pre>
+    </li>
+    <li>
+        查询单个实体：
+        <pre>  
+            方式一：public T QuerySingle&lt;T&gt;(string primarkVal, string permission = "")
+            泛型T:实体类型
+            primarkVal:主键值,也支持Int类型(重载)
+            permission:同客户端permission,默认参数，可不要
+
+            方式二：public T QuerySingle&lt;T&gt;(object where, string permission = "")
+            泛型T:实体类型
+            where:查询动态类，比如new {Name="like '%aa%'"}
+            permission:同客户端permission,默认参数，可不要
+         
+        </pre>
+    </li>
+    <li>
+        查询记录是否存在：
+        <pre> 
+            public bool Exists(string permission, string entityName, object where)
+            permission:同客户端permission，这里可直接传null
+            entityName:实体名
+            where:查询动态类，比如new {Mobile="17097913883"}
+        </pre>
+    </li>
+
+    <li>
+        查询第一行第一列：
+        <pre> 
+            public object ExecScalar(string sql)
+            sql:语句，该方法同SqlComman.ExecScalar   
+
+            public object ExecScalar(string text, CommandType cmdType, params IDbDataParameter[] parameters)
+            text:语句或存储过程
+            cmdType：类型，支持语句还是存储过程
+            parameters：参数数组，可用CreateParameter方法来创建
+        </pre>
+    </li>
+
+    <li>
+        执行语句：
+        <pre> 
+            方式一：public int ExecuteCommand(string sql)
+            sql:语句，该方法同SqlComman.ExecuteNonQuery   
+
+            方式二：public int ExecuteCommand(string text, CommandType cmdType, params IDbDataParameter[] parameters)         
+            text:语句或存储过程
+            cmdType：类型，支持语句还是存储过程
+            parameters：参数数组，可用CreateParameter方法来创建
+        </pre>
+    </li>
+
+
+    <li>
+        保存对象：
+        <pre> 
+            public void DoSave(string permission, IDBEntity entity)
+            entity:实体对象，如果带子集的（比如AgencyBusiness实体有List&lt;agencyconfig&gt; Configs属性，如果Configs不为空，则也会保存agencyconfig到表）  
+            permission:同客户端permission，这里可直接传null
+        </pre>
+    </li>
+
+    <li>
+        删除：
+        <pre> 
+            public int DoDelete(string permission, string entityName, string value)
+            entityName:实体名
+            value:主键值
+            permission:同客户端permission，这里可直接传null
+
+            public int DoDelete&lt;t&gt;(string value, string permission = null)
+            泛型T:实体类型
+            value:主键值
+            permission:同客户端permission，这里可直接传null或者不写
+        </pre>
+    </li>
+</ul>
+
+   
+     

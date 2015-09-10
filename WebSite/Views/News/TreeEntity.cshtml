@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "文章分类";
+}
+
+<h2>ClassManage</h2>
+<section class="container  clear-fix">
+    <div class="page-header">
+
+        <p>
+            <a id="addRoot" href="#">添加根结点</a>
+            <a id="addSub" href="#">添加子结点</a>
+            <a href="SiteManage">站点配置</a>
+        <p>
+    </div>
+
+  
+    <div>
+        <div  style="float:left;"><ul id="tree" class="ztree" style="width:160px; overflow:auto;"></ul></div>
+        <div id="detail" style="float:left;max-width:400px;"></div>
+    </div>
+</section>
+
+<script>
+
+    /*editCols为编辑的项，group为一个panel可组显示,display为显示label,colName为实体属性名，fields还有其它参数：
+        type：类型值有text,dropdown,checkbox,date,pic，默认为text
+           如果是dropdown类型还需要配置数据源，数据源有三种方式：
+               data:直接添加data参数，值为json数组，每项要有value和text
+               url:通过ajax访问url，将返回值做为数据源，每项要有value和text
+               table:通过内部方法直接查询table，需要配置参数displayField和valueField，分别对应text和value
+       requre:必需要输入
+   */
+
+
+    var entityTable = $("#tree").entityTable({
+        tree: true,
+        treeDisplayField: "SClsName",
+        treeValueField: "SClsCode",
+        table: "NewsCls"
+        , primary: "AutoCode"
+        , triggerQuery: true
+        , editCols: []
+        , editCols: [
+            {
+                group: "基础属性", fields: [
+                    { display: '分类名称', colName: "SClsName", requre: true }
+                    , { display: '分类代码', colName: "SClsCode", readonly: true }
+                    , { display: 'LSiteCode', colName: "LSiteCode", requre: true, type: "dropdown", table: "SiteInfo", valueField: "AutoCode", displayField: "sName" }
+                ]
+            }]
+    });
+
+
+
+    $("#addRoot").click(function () {
+        entityTable.ShowCreateTree(true);
+    })
+
+    $("#addSub").click(function () {
+        entityTable.ShowCreateTree(false);
+    })
+
+    /*-----------------------------------手动添加编辑项------------------------------*/
+
+
+</script>

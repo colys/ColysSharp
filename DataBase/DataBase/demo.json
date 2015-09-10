@@ -1,0 +1,24 @@
+﻿/*Fields集合，定义生成语句的格式化，每项是长度为2的数组，[select格式化，where格式化]，不定义则默认与实体字段名相同，where为=
+IgnoreNull :就算是空也要更新的列
+*/
+{
+	'new-infomation-query':{
+		TableSql:'AD_SubjectInfo a left join AD_SubjectItem b on a.subjectId=b.subjectId',
+		Fields:{		
+			'SubjectId':['a.SubjectId'],
+			CreateTime:["a.CreateTime"]
+		},
+		Page:{'PageSize':0,'PageIndex':0 },
+		NotAllows:['subjectid','Creator'],
+		IgnoreNull:[]
+	},
+	'subjectitem':{
+		TableSql:'AD_SubjectItem',
+		Fields:{
+			ItemId:['ItemId','ItemId = {0}'],
+			Title:['Title',"Title like '%{0}%'"],
+			Creator:['CreatorId']
+		},
+		NotAllows:['subjectid','Creator']
+	}
+}

@@ -1,0 +1,1 @@
+2015-09-09 22:41:14,450 [11912] update X5_wsNewCls set SClsCode=@SClsCode,SClsFCode=@SClsFCode,SClsName=@SClsName where AutoCode = '30'

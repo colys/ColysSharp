@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<a href="@Url.Action("EntityTable", "Demo")"> entityTable 单表维护Demo</a><br />
+<a href="@Url.Action("TreeEntity","News")"> entityTable 树型表维护Demo</a><br />
+<a href="@Url.Action("JsonTable", "Demo")">JsonTable实例</a><br />
+
+<a href="@Url.Action("TreeEntityCustom", "Demo")">entityTable + JsonTable 实例</a><br />
+
+<a href="@Url.Action("DBContext", "Demo")">DBContext及客户端clientEx实例</a><br />
+
+<a href="@Url.Action("BaseController", "Demo")">BaseController控制层基类</a><br />

@@ -1,0 +1,9 @@
+﻿{
+	"AgencyBusiness":{
+		TableSql:"A0_AgencyBusiness a join A0_Business b on a.BusinessID = b.ID",
+		Fields:{
+			"Id":["a.Id"],
+			"BusinessName":["b.Name"]
+		}
+	}
+}
